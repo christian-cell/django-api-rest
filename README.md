@@ -34,9 +34,18 @@ if exits it was success
 
 next step , create a super user
 
+migrate your model Articulos
+
+$ docker-compose exec app python manage.py makemigrations
+
+you can check in migrations/0001_initial.py
+
+and migrate that migration
+
 $ docker-compose exec app python manage.py createsuperuser
 
 pay attention and answer carefully the questions python makes
 
+MIGRATE YOUR MIGRATION
 
-
+$ docker-compose exec app python manage.py migrate
