@@ -18,6 +18,5 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-               # incluye el nombre de la app y el nombre del archivo de rutas de la propia app
-    path('api/',include('api.urls'))
+              
 ]
