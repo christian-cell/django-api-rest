@@ -34,6 +34,7 @@ if exits it was success
 
 next step , create a super user
 
+
 migrate your model Articulos
 
 $ docker-compose exec app python manage.py makemigrations
@@ -49,3 +50,7 @@ pay attention and answer carefully the questions python makes
 MIGRATE YOUR MIGRATION
 
 $ docker-compose exec app python manage.py migrate
+
+run the server
+
+$ docker-compose exec app python manage.py runserver
