@@ -54,3 +54,5 @@ $ docker-compose exec app python manage.py migrate
 run the server
 
 $ docker-compose exec app python manage.py runserver
+
+ingress as admin in http://localhost:admin and INSERT A NEW ARTICLE in Articulos table
