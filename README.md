@@ -25,3 +25,10 @@ feel free to change it .
 
 create a Model for your application api and declare it in admin.py
 
+time to check mysql connection running command
+
+$ docker-compose exec app python manage.py migrate
+
+check in localhost:8087 phpMyadmin if you have 10 default django tables inside django-local db
+if exits it was success
+
