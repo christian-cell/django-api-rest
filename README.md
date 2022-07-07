@@ -63,4 +63,7 @@ and create urls.py inside api app
 
 and register this urls.py inside main urls.py of the project
 
+see http://localhost:8000/api/articulos/
+you'll find the 2 articles
+
 
