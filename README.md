@@ -55,7 +55,7 @@ run the server
 
 $ docker-compose exec app python manage.py runserver
 
-ingress as admin in http://localhost:admin and INSERT A NEW ARTICLE in Articulos table
+ingress as admin in http://localhost:8000/admin and INSERT A NEW ARTICLE in Articulos table
 
 let's create a view in views.py inside app api importing View from django.views using POO paradigma
 
