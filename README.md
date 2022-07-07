@@ -16,7 +16,7 @@ $ docker-compose exec app django-admin.py startproject app .
 
 let's create an app named api
 
-$ docker exec app django-admin createapp api
+$ docker-compose exec app django-admin createapp api
 
 add the string 'api' as last index of the array INSTALLED_APPS in your settings.py
 
