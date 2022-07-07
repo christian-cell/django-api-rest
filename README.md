@@ -23,3 +23,5 @@ add the string 'api' as last index of the array INSTALLED_APPS in your settings.
 DATABASE SETTINGS are already set in the file docker-compose.yml and the file settings.py
 feel free to change it .
 
+create a Model for your application api and declare it in admin.py
+
