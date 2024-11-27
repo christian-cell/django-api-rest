@@ -5,6 +5,7 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     volumes:
       - db-store:/var/lib/mysql
+
   phpmyadmin:
     container_name: phpmyadmin
     image: phpmyadmin/phpmyadmin:5.1.1
@@ -13,7 +14,7 @@ services:
       - '8087:80'
     environment:
       - PMA_HOST=db
-      - PMA_PASSWORD:secret
+      - PMA_PASSWORD=secret
     depends_on:
       - db
     links:
@@ -23,7 +24,7 @@ services:
     image: nginx:1.18-alpine
     ports:
       - 8000:8000
-    volumes :
+    volumes:
       - ./src:/workspace
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./docker/nginx/uwsgi_params:/etc/nginx/uwsgi_params
@@ -33,14 +34,14 @@ services:
       - app
 
   app:
-      build: ./docker/python
-      command: uwsgi --socket :8001 --module app.wsgi --py-autoreload 1 --logto /tmp/tmp.log
-      volumes:
-        - ./src:/workspace
-      expose:
-        - "8001"
-      depends_on:
-        - db
+    build: ./docker/python
+    command: uwsgi --socket :8001 --module app.wsgi --py-autoreload 1 --logto /tmp/tmp.log
+    volumes:
+      - ./src:/workspace
+    expose:
+      - "8001"
+    depends_on:
+      - db
 
 volumes:
   db-store:
